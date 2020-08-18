@@ -13,18 +13,13 @@ body{
     text-align: center;
 }
 
-main {
-    height: 100%;
-}
-
 section {
-    height: 100%;
-    padding: 4em 2em;
+    padding: 1em 0em;
     position: relative;
     width: 100%;
 }
 
-#cabeza{
+.navbar{
     background-color: rgba(128, 128, 128, 1);
     padding: 0;
     position: fixed;
@@ -33,53 +28,63 @@ section {
     display: none;
 }
 
+.banner{
+    width: 100%;
+    padding: 0%;
+    align-self: center;
+} 
+
 .logonav{
     background: url(img/ScrArmy.png) no-repeat;
     background-size: contain;
     float: left;
-    height: 4rem;
-    margin-left: 1.85em;
+    height: 10vh;
+    margin-left: 2vh;
     width: 25%;
 }
 
-.navbar{
+.navbar-nav {
+    margin: 0%;
+}
+
+.navbar .navbar-nav .navitem {
+    /* border-right: 0.03125em solid rgba(255, 255, 255, 1); */
+    display: inline;
+    /* padding: 1em 1em; */
+    list-style: none;
+}
+
+.navbar-nav .navitem a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.95rem;
+    letter-spacing: 0.3rem;
+    padding: 0.5em 1em;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbarcolapse{
     float: right;
     text-align: right;
     width: 70%;
     overflow: hidden;
-}
-
-ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-ul li {
-    border-right: 0.03125em solid rgba(255, 255, 255, 1);
-    display: inline-block;
-    padding: 1em 1em;
-}
-
-ul li a {
-    font-family: 'Open Sans', sans-serif;
-    color: rgba(255, 255, 255, 1);
-    font-size: 0.95rem;
-    letter-spacing: 0.3rem;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    transition: prop time;
-}
-
 h1{
     font-family: 'Open Sans', sans-serif;
-    font-size: 50px;
+    font-size: 10vh;
+    text-align: center;
 }
 
 h2{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-style: italic;
-    font-size: 25px;
+    font-size: 5vh;
+    text-align: center;
 }
 
 h3{
@@ -94,3 +99,48 @@ footer{
     background-color: #808080;
     color: rgba(255, 255, 255, 1);
 }
+
+.hamburguesa{
+    float: right;
+    height: 5vh;
+    margin: 2.5vh 2vh;
+    width: 5vh;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    display: none;
+}
+
+@media screen and (max-width:456px){
+    .logonav{
+        display: inline-block;
+        float: none;
+    }
+
+    .hamburguesa{
+        display: inline-block;
+    }
+
+    .navbar-nav{
+        color: white;
+        padding: 0%;
+    }
+
+    .navbar .navbar-nav .navitem{
+        display: block;
+        list-style: none;
+    }
+
+    .navbarcolapse{
+        width: 50%;
+        overflow: hidden;
+        text-align: center;
+        height: 0vh;
+        transition: all 200ms ease-in-out;
+    }
+
+    .colapse{
+        height: 50vh;
+    }
+} 
