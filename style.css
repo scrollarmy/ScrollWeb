@@ -94,3 +94,8 @@ footer{
     background-color: #808080;
     color: rgba(255, 255, 255, 1);
 }
+/* la imagen siempre ocupará el 100% de su padre. */
+.banner>img{
+    width: 100%;
+    max-width: 400px; 
+}
