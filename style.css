@@ -102,20 +102,19 @@ footer{
 
 .hamburguesa{
     float: right;
-    height: 5vh;
-    margin: 2.5vh 2vh;
-    width: 5vh;
+    height: 6vh;
+    margin: 2vh 2vh;
     background-color: transparent;
     color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 3px;
+    border-radius: 2px;
     display: none;
 }
 
 @media screen and (max-width:456px){
     .logonav{
         display: inline-block;
-        float: none;
+        align-self: center; 
     }
 
     .hamburguesa{
@@ -125,6 +124,7 @@ footer{
     .navbar-nav{
         color: white;
         padding: 0%;
+        float: center;
     }
 
     .navbar .navbar-nav .navitem{
@@ -133,7 +133,7 @@ footer{
     }
 
     .navbarcolapse{
-        width: 50%;
+        width: 100%;
         overflow: hidden;
         text-align: center;
         height: 0vh;
@@ -141,6 +141,11 @@ footer{
     }
 
     .colapse{
-        height: 50vh;
+        height: auto;
     }
 } 
+/* la imagen siempre ocupará el 100% de su padre. */
+.banner>img{
+    width: 100%;
+    max-width: 400px; 
+}
