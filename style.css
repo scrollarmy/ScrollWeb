@@ -144,3 +144,8 @@ footer{
         height: 50vh;
     }
 } 
+/* la imagen siempre ocupará el 100% de su padre. */
+.banner>img{
+    width: 100%;
+    max-width: 400px; 
+}
