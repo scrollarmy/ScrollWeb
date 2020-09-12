@@ -72,6 +72,9 @@ section {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    transition: all 200ms ease-in-out; 
+    animation: slideOutUp;
+    animation-duration: 500ms;  
 }
 
 h1{
@@ -137,11 +140,14 @@ footer{
         overflow: hidden;
         text-align: center;
         height: 0vh;
-        transition: all 200ms ease-in-out;
+        
     }
 
     .colapse{
-        height: auto;
+        height: auto; 
+        transition: all 200ms ease-in-out;
+        animation: slideInDown;
+        animation-duration: 500ms;
     }
 } 
 /* la imagen siempre ocupará el 100% de su padre. */

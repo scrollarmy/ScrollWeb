@@ -15,3 +15,9 @@ $(document).ready(function(){ //Menu responsive
         $('.navbarcolapse').toggleClass("colapse")
     })
 });
+
+$(document).ready(function(){ //Cierre del menu responsive
+    $('.navitem').click(function(){
+        $('.navbarcolapse').toggleClass("colapse")
+    })
+});
