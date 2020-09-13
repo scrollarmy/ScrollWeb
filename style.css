@@ -26,13 +26,15 @@ section {
     width: 100%;
     z-index: 100;
     display: none;
+    height: 10vh;
+    margin: 0%;
 }
 
 .banner{
     width: 100%;
     padding: 0%;
     align-self: center;
-} 
+}
 
 .logonav{
     background: url(img/ScrArmy.png) no-repeat;
@@ -43,8 +45,9 @@ section {
     width: 25%;
 }
 
-.navbar-nav {
+.navbar.navbar-nav {
     margin: 0%;
+    height: 100vh;
 }
 
 .navbar .navbar-nav .navitem {
@@ -52,6 +55,7 @@ section {
     display: inline;
     /* padding: 1em 1em; */
     list-style: none;
+    align-self: center;
 }
 
 .navbar-nav .navitem a{
@@ -74,7 +78,7 @@ section {
     padding: 0;
     transition: all 200ms ease-in-out; 
     animation: slideOutUp;
-    animation-duration: 500ms;  
+    animation-duration: 500ms;
 }
 
 h1{
@@ -128,6 +132,7 @@ footer{
         color: white;
         padding: 0%;
         float: center;
+        align-items: center;
     }
 
     .navbar .navbar-nav .navitem{
@@ -139,8 +144,7 @@ footer{
         width: 100%;
         overflow: hidden;
         text-align: center;
-        height: 0vh;
-        
+        height: 0vh;        
     }
 
     .colapse{
