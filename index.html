@@ -1,72 +1,298 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
-        rel="stylesheet">
-    <title>Scrollarmy</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <script src="https://kit.fontawesome.com/f5f3128eaa.js" crossorigin="anonymous"></script>
-    <script src="js/prefixfree.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/navbar.js"></script>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Chapter ubicado en Pergamino de la comunidad Sysarmy. Birras el segundo jueves de cada mes.">
+    <meta name="author" content="ScrollArmy">
 
-<body>
-    <header id="cabeza">
-        <nav>
-            <div class="navbar">
-                <a class="logonav" href="#home"></a>
-                <button class="hamburguesa">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-                <div class="navbarcolapse">
-                    <ul class="navbar-nav">
-                        <li class="navitem"><a href="#home">Inicio</a></li>
-                        <li class="navitem"><a href="#nosotros">Nosotros</a></li>
-                        <li class="navitem"><a href="#birraslocas">Birras</a></li>
-                        <li class="navitem"><a href="#contacto">Contacto</a></li>
-                    </ul>
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="ScrollArmy" /> <!-- website name -->
+	<meta property="og:site" content="scrollarmy.com.ar" /> <!-- website link -->
+	<meta property="og:title" content="ScrollArmy"/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>ScrollArmy - Comunidad de sistemas Pergamino</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body data-spy="scroll" data-target="">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">LOGO TEXT</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/ScrArmy.png" alt="alternative"></a> 
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">INICIO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#features">BIRRAS 🍻</a>
+                </li>
+             <!--    <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#details">ABOUT</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">CONTACTO</a>
+                </li> -->
+            </ul>
+
+            <!-- Redes sociales que no tenemos todavia. -->
+            
+            <!-- <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span> -->
+
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h1>COMUNIDAD DE <span id="js-rotating">SISTEMAS <br>,ESTUDIANTES,DEVS,NERDS,SYSADMINS,CURIOSOS</span></h1>
+                            <p class="p-large">Somos el chapter de una comunidad agnostica en cuanto a tecnologias y puestos de trabajo, sumate a tomar algo y charlar! </p>
+                        </div>
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <img class="img-fluid" src="images/ScrArmy.png" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- Features -->
+    <div id="features" class="tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>LO IMPORTANTE</h2>
+                    <div class="p-heading p-large">La comunidad se sostiene en base a juntarse a tomar cerveza, o lo que quieras, una vez al mes y ver que surje.</div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <!-- Image Pane -->
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="images/beer gif.gif" alt="alternative">
+                        </div>
+                        <!-- end of image pane -->
+                        
+                        <!-- Text And Icon Cards Area -->
+                        <div id="textAndIconsCardsArea" class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-2 text-center">
+                                            <div class="card-icon ">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h4 class="card-title">Donde</h4>
+                                            <p>Nos reunimos en algún bar de la ciudad, vamos avisando con tiempo siempre. Agregate a Whatsapp para estar al tanto</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-2 text-center">
+                                            <div class="card-icon">
+                                                <i class="far fa-calendar-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h4 class="card-title">Cuando</h4>
+                                            <p>El segundo jueves de cada mes desde las 21hs. Sin falta (Puto covid)</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2 text-center">
+                                            <div class="card-icon">
+                                                <i class="far fa-money-bill-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h4 class="card-title">Gastos</h4>
+                                            <p>Nadie te va a cobrar nada para venir a sentarte y compartir un rato, ahora ... lo que consumas lo pagas vos.</p>
+                                        </div>
+                                    </div>
+                        </div> <!-- end of col-md-8 -->
+                        <!-- end of text and icon cards area -->
+                    </div> <!-- end of row -->
+                    
+                    <!-- Este es el boton que esta fijado abajo a la derecha -->
+                    <a href="https://chat.whatsapp.com/Hvby3P63I5wHVtN2Ne0tyE" class="whatsapp" target="_blank"> <i class="fab fa-whatsapp whatsapp-icon"></i></a>
+                </div>
+                    
+                </div> <!-- end of container -->
+                
+                <div class="row mt-5">
+                    <div class="col-md-12 text-center">
+                        <a class="btn-solid-reg" target="_blank" href="https://chat.whatsapp.com/Hvby3P63I5wHVtN2Ne0tyE">
+                            <i class="fab fa-whatsapp" style="font-size: 1.1rem;"></i> <custom style="font-size: 1.1rem;">GRUPO DE WHATSAPP</custom> 
+                        </a>
+                    </div>
+            </div> <!-- end of row --> 
+        </div> <!-- end of container --> 
+    </div> <!-- end of tabs -->
+    <!-- end of features -->
+
+
+    <!-- Details 1 -->
+
+    <!-- <div id="details" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>ACERCA DE NOSOTROS</h2>
+                    <div class="p-heading p-large">Quien carajo somos? <br>
+                        Y aca que mentimos? <br>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque quam unde cumque numquam vero ab? Obcaecati ipsa at laudantium voluptatibus quasi illo inventore culpa quo, accusamus deleniti molestiae vel sed?
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <section id="home">
-        <h1 class="animate__animated animate__fadeIn">ScrollArmy</h1>
-        <h2 class="animate__animated animate__fadeIn animate__delay-1s" style="text-align: center">No sabemos muy bien
-            que estamos haciendo</h2>
-        <section class="banner">
-            <!-- recorta la imagen y que quede solo lo negro -->
-            <img class="animate__animated animate__fadeIn animate__delay-3s" src="img/ScrArmy.png" alt="Aca va una imagen re piola, creeme troesma">
-        </section>
-    </section>
-    <section id="nosotros">
-        <h3>¿Quienes somos?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet alias quibusdam dicta obcaecati maiores hic
-            numquam voluptates eligendi optio molestias blanditiis fuga ab adipisci quos delectus minima, dolorem qui
-            distinctio.</p>
-    </section>
-    <section id="birraslocas">
-        <h3>Birras!</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eius ea omnis dolores praesentium
-            molestiae inventore fugiat et quos asperiores nisi, doloribus autem quas consectetur. Iure sint qui eum
-            deleniti.</p>
-    </section>
-    <section id="contacto">
-        <h3>Contacto</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium architecto sit eum ullam atque
-            consectetur quas! Aliquam labore ipsam adipisci ullam facere eius quisquam. Quisquam dolore expedita sed
-            quia.</p>
-    </section>
-    <footer>
-        <p style="font-style: italic">Derechos reservados &copy; 1970 / Hasta que no pagemos mas el dominio</p>
-        <p>Atado con alambre por Scrollarmy</p>
-    </footer>
-</body>
+        </div>
+    </div> -->
+    <!-- end of details 1 -->
 
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col">
+                        <h4>Acerca de ScrollArmy</h4>
+                        <p>ScrollArmy es un chapter de Sysarmy, el soporte de quienes dan soporte. Para mas info referirse a sus redes sociales.</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Important Links</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Sysarmy casa central <a class="turquoise" href="https://sysarmy.com/en/">Sysarmy.com</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"> Scrollfix <a class="turquoise" id="linkScrollfix" href="http://scrollarmy.duckdns.org:8096/"> las favoritas de alguién</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Social Media</h4>
+                        <span class="fa-stack">
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/scrollarmy">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.instagram.com/scrollarmy/">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        
+                    </div> 
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Atado con alambre por ScrollArmy hasta que se rompa feo.</p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+    	
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
 </html>

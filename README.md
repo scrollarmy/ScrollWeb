@@ -1,12 +1,8 @@
-Muchas librerias de JS que meti por ahi y no tengo ni la mas puta idea de si van a ser usadas o no.
-Lo mas probable es que no, de ultimas la sacamos en la version final.(KJjjjjjjjjjjjjjjjjjjjjj).
 
-Tasks para hacer.
+## Web de Scrollarmy
+Chapter de la comunidad Sysarmy, cuidad Pergamino - Bs As.
 
-Llenar los campos
-Tema Oscuro
-Navbar
-    Simetria Vertical
-    Animacion de Salida para el desplegable
-Seccion RRHH
-Imagen general
+📱 Sumate al grupo de [Whatsapp](https://chat.whatsapp.com/Hvby3P63I5wHVtN2Ne0tyE)
+📱 También en [Telegram!](https://t.me/joinchat/UTFeXEyedP314dvy)
+
+![](https://media.giphy.com/media/dlMIwDQAxXn1K/giphy.gif)
