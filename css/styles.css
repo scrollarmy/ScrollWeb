@@ -951,22 +951,29 @@ input[type='checkbox'] {
 
 
 /* ------------------- */
-.whatsapp {
+.bubble{
 	position:fixed;
 	width:60px;
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
 	font-size:30px;
 	z-index:100;
+}
+.whatsapp {
+	background-color:#25d366;
   }
   
-  .whatsapp-icon {
-	margin-top:13px;
+  .bubble-icon {
+	margin-top:14px;
+  }
+
+  .telegram{
+	 background-color: #229ED9;
+	 right: 110px; 
   }
 /* ------------------- */
 
