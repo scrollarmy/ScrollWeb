@@ -131,15 +131,17 @@ a.white {
 	font: 700 1rem/1.5rem "Montserrat", sans-serif;
 }
 
-.btn-solid-reg {
-	display: inline-block;
-	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
-	border: 0.125rem solid #FBC02D;
-	border-radius: 2rem;
+.btn-solid-reg, .blog-button {
 	background-color: transparent;
-	color: white;
-	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
+	border: 0.125rem solid #FBC02D;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	border-radius: 2rem;
+}
+.btn-solid-reg {
+	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
+	display: inline-block;
+	color: white;
 	transition: all 0.2s ease;
 }
 
@@ -1344,14 +1346,72 @@ input[type='checkbox'] {
 .form .list-unstyled .fa-phone {
 	vertical-align: 3%;
 }
+/**********************/
+/*     Blog           */
+/**********************/
 
+#blog{
+	padding: 3rem 0;
+	background-color: #262431;
+}
+
+/* From cssbuttons.io by @nikk7007 */
+.blog-button {
+	padding: 2rem 2.125rem 2rem 2.125rem;
+	--color: #FBC02D;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .5s;
+	border: 1px solid;
+	text-transform: uppercase;
+	color: var(--color);
+	z-index: 1;
+   }
+   
+   .blog-button::before, .blog-button::after {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	border-radius: 50%;
+	z-index: -1;
+	background-color: var(--color);
+	transition: 1s ease;
+   }
+   
+   .blog-button::before {
+	top: -1em;
+	left: -1em;
+   }
+   
+   .blog-button::after {
+	left: calc(100% + 1em);
+	top: calc(100% + 1em);
+   }
+   
+   .blog-button:hover::before, .blog-button:hover::after {
+	height: 410px;
+	width: 410px;
+   }
+   
+   .blog-button:hover {
+	color: rgb(10, 25, 30);
+   }
+   
+   .blog-button:active {
+	filter: brightness(.8);
+   }
+   
 
 /**********************/
 /*     14. Footer     */
 /**********************/
 .footer {
-	padding-top: 5rem;
-	background-color: #262431;
+	padding-top: 3rem;
+	background-color: #1d1b25;
 }
 
 .footer .footer-col {
@@ -1403,7 +1463,7 @@ input[type='checkbox'] {
 .copyright {
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
-	background-color: #262431;
+	background-color: #1d1b25;
 	text-align: center;
 }
 
@@ -1994,3 +2054,31 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+
+
+@keyframes heartFadeInOut {
+	0% {
+	  opacity:1;
+	}
+	14% {
+	  opacity:1;
+	}
+	28% {
+	  opacity:0;
+	}
+	42% {
+	  opacity:0;
+	}
+	70% {
+	  opacity:0;
+	}
+  }
+
+  .pulsingAnim { 
+	animation-name: heartFadeInOut; 
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 1.7s;
+	animation-direction: alternate;
+	color:#FBC02D;
+  }
