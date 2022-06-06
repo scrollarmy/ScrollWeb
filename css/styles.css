@@ -2098,6 +2098,7 @@ a:hover.back-to-top {
 @media screen and (max-width: 992px) {
 	.background-squares {
 		height: 100vh !important;
+		min-height: 900px !important;
 	}
   }
 
@@ -2105,6 +2106,7 @@ a:hover.back-to-top {
     position: absolute;
     width: 100vw;
     height: 90vh;
+	min-height: 900px;
     top: 0;
     left: 0;
     margin: 0;
