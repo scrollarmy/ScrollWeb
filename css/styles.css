@@ -745,8 +745,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(to bottom right, rgba(72, 72, 212, 0), rgba(241, 104, 104, 0)), url('../images/header-background.jpg') center center no-repeat;
-	background-size: cover;
+	background-color: #2f2c3d;
 }
 
 .header .header-content {
@@ -1351,8 +1350,8 @@ input[type='checkbox'] {
 /**********************/
 
 #blog{
-	padding: 3rem 0;
-	background-color: #262431;
+	padding: 4rem 0;
+	background-color: #221f2b;
 }
 
 /* From cssbuttons.io by @nikk7007 */
@@ -1918,7 +1917,7 @@ a:hover.back-to-top {
 
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
-	
+
 	/* Navigation */
 	.navbar-custom {
 		padding: 2.125rem 5rem 2.125rem 5rem;
@@ -2082,3 +2081,187 @@ a:hover.back-to-top {
 	animation-direction: alternate;
 	color:#FBC02D;
   }
+
+  @keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+	.background-squares {
+		height: 100vh !important;
+	}
+  }
+
+.background-squares {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #f89a03;
+    overflow: hidden;
+}
+.background-squares li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 12s linear infinite;
+}
+
+
+
+
+.background-squares li:nth-child(0) {
+    left: 85%;
+    width: 289px;
+    height: 289px;
+    bottom: -289px;
+    animation-delay: 1s;
+}
+.background-squares li:nth-child(1) {
+    left: 62%;
+    width: 127px;
+    height: 127px;
+    bottom: -127px;
+    animation-delay: 2s;
+}
+.background-squares li:nth-child(2) {
+    left: 14%;
+    width: 204px;
+    height: 204px;
+    bottom: -204px;
+    animation-delay: 2s;
+}
+.background-squares li:nth-child(3) {
+    left: 58%;
+    width: 161px;
+    height: 161px;
+    bottom: -161px;
+    animation-delay: 2s;
+}
+.background-squares li:nth-child(4) {
+    left: 62%;
+    width: 183px;
+    height: 183px;
+    bottom: -183px;
+    animation-delay: 5s;
+}
+.background-squares li:nth-child(5) {
+    left: 23%;
+    width: 277px;
+    height: 277px;
+    bottom: -277px;
+    animation-delay: 2s;
+}
+.background-squares li:nth-child(6) {
+    left: 31%;
+    width: 289px;
+    height: 289px;
+    bottom: -289px;
+    animation-delay: 30s;
+}
+.background-squares li:nth-child(7) {
+    left: 30%;
+    width: 297px;
+    height: 297px;
+    bottom: -297px;
+    animation-delay: 8s;
+}
+.background-squares li:nth-child(8) {
+    left: 23%;
+    width: 153px;
+    height: 153px;
+    bottom: -153px;
+    animation-delay: 4s;
+}
+.background-squares li:nth-child(9) {
+    left: 68%;
+    width: 165px;
+    height: 165px;
+    bottom: -165px;
+    animation-delay: 37s;
+}
+.background-squares li:nth-child(10) {
+    left: 14%;
+    width: 133px;
+    height: 133px;
+    bottom: -133px;
+    animation-delay: 50s;
+}
+.background-squares li:nth-child(11) {
+    left: 83%;
+    width: 164px;
+    height: 164px;
+    bottom: -164px;
+    animation-delay: 25s;
+}
+.background-squares li:nth-child(12) {
+    left: 67%;
+    width: 195px;
+    height: 195px;
+    bottom: -195px;
+    animation-delay: 58s;
+}
+.background-squares li:nth-child(13) {
+    left: 21%;
+    width: 159px;
+    height: 159px;
+    bottom: -159px;
+    animation-delay: 49s;
+}
+.background-squares li:nth-child(14) {
+    left: 62%;
+    width: 234px;
+    height: 234px;
+    bottom: -234px;
+    animation-delay: 58s;
+}
+.background-squares li:nth-child(15) {
+    left: 35%;
+    width: 123px;
+    height: 123px;
+    bottom: -123px;
+    animation-delay: 42s;
+}
+.background-squares li:nth-child(16) {
+    left: 59%;
+    width: 243px;
+    height: 243px;
+    bottom: -243px;
+    animation-delay: 6s;
+}
+.background-squares li:nth-child(17) {
+    left: 2%;
+    width: 241px;
+    height: 241px;
+    bottom: -241px;
+    animation-delay: 12s;
+}
+.background-squares li:nth-child(18) {
+    left: 86%;
+    width: 123px;
+    height: 123px;
+    bottom: -123px;
+    animation-delay: 57s;
+}
+.background-squares li:nth-child(19) {
+    left: 52%;
+    width: 294px;
+    height: 294px;
+    bottom: -294px;
+    animation-delay: 75s;
+}
