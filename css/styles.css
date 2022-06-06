@@ -2100,13 +2100,13 @@ a:hover.back-to-top {
 		height: 100vh !important;
 		min-height: 900px !important;
 	}
-  }
+}
 
 .background-squares {
     position: absolute;
     width: 100vw;
     height: 90vh;
-	min-height: 900px;
+  	min-height: 900px;
     top: 0;
     left: 0;
     margin: 0;
