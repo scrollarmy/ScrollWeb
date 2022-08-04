@@ -54,12 +54,16 @@
         }
         .front{
             height: 100vh;
+            padding-top: 3em;
         }
         .downArrow{
             position: relative;
             font-size: 8rem;
             color: #0c0;
             animation: mymove 1.5s infinite;
+        }
+        .logoIframe{
+            display: none;
         }
  
         @keyframes mymove {
@@ -68,7 +72,38 @@
         }
 
         body{
-            background-image: linear-gradient(#222 0%,#3c3c3c 100%);
+            background-image: linear-gradient(#000 0%,#222 100%);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .metadataLogo{
+                width: 26vw; 
+            }
+            .metadatatitle{
+                font-size: 2.5em;
+            }
+
+            .metadatasubtext{
+                font-size: 1em;
+                margin-top: 5em;
+            }
+
+            .front{
+                padding-top: 10em;
+            }
+            .owl-carousel .owl-item img{
+                max-width: 70vw;
+            }   
+            .botonesCalendario .btn{
+                margin: 10px;
+            }
+            .iframeAscii{
+                display: none;
+            }
+            .logoIframe{
+                display: inline-block;
+                width: 100%;
+            }
         }
 
 
@@ -92,7 +127,7 @@
             <div class="row">
                 <div class="col">
                         <h1 class="text-center metadatatitle">
-                            &lt; Metadata &gt; 
+                            Metadata 
                         </h1>
                         <h4 class="text-center metadatasubtext">
                             Evento que busca dar a conocer historias de gente que esta trabajando en sistemas en Pergamino y al rededores asi como también generar disparadores de nuevas ideas a seguir investigando.
@@ -140,10 +175,10 @@
                         <div class="panel-heading"><h3 class="panel-title">Nicolas Balmaceda</h3></div>
                         <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-sm-12">
                                 <img class="img-speaker" src="assets/nbalmaceda.jpg" alt="nbalmaceda">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-sm-12">
                                 <h3>Road to devops</h3>
                                 <p>Abstract de la charla de balma</p>    
                             </div>
@@ -156,10 +191,10 @@
                         <div class="panel-heading"><h3 class="panel-title">Nicolas Balmaceda</h3></div>
                         <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-sm-12">
                                 <img class="img-speaker" src="assets/nbalmaceda.jpg" alt="nbalmaceda">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-sm-12">
                                 <h3>Road to devops</h3>
                                 <p>Abstract de la charla de balma</p>    
                             </div>
@@ -172,10 +207,10 @@
                         <div class="panel-heading"><h3 class="panel-title">Nicolas Balmaceda</h3></div>
                         <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-sm-12">
                                 <img class="img-speaker" src="assets/nbalmaceda.jpg" alt="nbalmaceda">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-sm-12">
                                 <h3>Road to devops</h3>
                                 <p>Abstract de la charla de balma</p>    
                             </div>
@@ -188,10 +223,10 @@
                         <div class="panel-heading"><h3 class="panel-title">Nicolas Balmaceda</h3></div>
                         <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-sm-12">
                                 <img class="img-speaker" src="assets/nbalmaceda.jpg" alt="nbalmaceda">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-sm-12">
                                 <h3>Road to devops</h3>
                                 <p>Abstract de la charla de balma</p>    
                             </div>
@@ -204,10 +239,10 @@
                         <div class="panel-heading"><h3 class="panel-title">Nicolas Balmaceda</h3></div>
                         <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-5 col-sm-12">
                                 <img class="img-speaker" src="assets/nbalmaceda.jpg" alt="nbalmaceda">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-7 col-sm-12">
                                 <h3>Road to devops</h3>
                                 <p>Abstract de la charla de balma</p>    
                             </div>
@@ -329,7 +364,7 @@
                 └── 21:20hs - Cierre Evento - Nos despedimos en las Adminbirras en XX Lugar!
             </p>
             <br>
-            <div class="container">
+            <div class="container botonesCalendario">
                     <div class="col-md-4 center-block">
                         <a href="" class="btn btn-block btn-info">Google calendar</a>
                     </div>
@@ -385,6 +420,7 @@
                     <div class="panel-heading">scrollArmy-ascii.txt</div>
                     <div class="panel-body">
                         <iframe src="assets/ascii-art.html" class="iframeAscii"></iframe>
+                        <img class="logoIframe" src="images/ScrArmy-small.png" alt="ScrollArmyLogo">
                     </div>
                 </div>
 
@@ -448,10 +484,10 @@
             $('.owl-carousel').owlCarousel({
                 margin:10,
                 center:true,
-                loop:false,
+                loop:true,
                 autoWidth:true,
                 items:5,
-                autoplay:true,
+                autoplay:false,
                 lazyLoad: true,
                 autoplayTimeout:7000,
                 autoplayHoverPause:true
