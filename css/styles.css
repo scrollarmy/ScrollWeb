@@ -621,6 +621,9 @@ input[type='checkbox'] {
 /**************************/
 /*     03. Navigation     */
 /**************************/
+.container-fluid.background-scrollarmy {
+	background-color:#FF9800;
+}
 .navbar-custom {
 	background-color: #FF9800;
 	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
