@@ -1348,6 +1348,17 @@ login de lapos web
 .form .list-unstyled .fa-phone {
 	vertical-align: 3%;
 }
+
+
+/**********************/
+/*     Evento         */
+/**********************/
+
+#evento{
+	padding: 4rem 0;
+	background-color: #221f2b;
+}
+
 /**********************/
 /*     Blog           */
 /**********************/
@@ -1613,7 +1624,7 @@ a:hover.back-to-top {
 	
 	.navbar-custom .nav-item .nav-link:hover,
 	.navbar-custom .nav-item .nav-link.active {
-		color: #FBC02D;
+		color: #221f2b;
 	}
 
 	.navbar-custom.top-nav-collapse {
@@ -1632,7 +1643,7 @@ a:hover.back-to-top {
 	
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color: #FBC02D;
+		color: #221f2b;
 	}
 
 	.navbar-custom .dropdown-menu {
