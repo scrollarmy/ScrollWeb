@@ -1,435 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<!-- Favicon  -->
+<link rel="icon" href="images/favicon.png">
+<style>
+  .image-gallery {
+    /* Mobile first */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-gallery .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-item img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .image-gallery {
+      flex-direction: row;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .flip-card{
+      margin-top: 40px;
+    }
+  }
+  .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.flip-card-front {
+  background-color: #f97515;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #32334a;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="event/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="event/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="event/images/favicon-16x16.png">
-    <link rel="manifest" href="event/images/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flisol - Festival de instalación de software libre</title>
-    <link rel="stylesheet" href="event/assets/css/style.css">
-    <link rel="stylesheet" href="event/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Metadata #23</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="event/assets/css/bootstrap4-neon-glow.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'>
+
 </head>
+
 <body>
-<!-- ////////////////////////////////////////////////////////////////////////////////////////
-                               START SECTION 1 - THE NAVBAR SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////-->
-<nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+
+  <div class="navbar-dark text-white">
     <div class="container">
-      <a class="navbar-brand" href="">
-        <h3><strong>FLISOL 2023</strong></h3>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#acerca-de-flisol">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#instalaciones">Instalaciones</a></li>
-          <li class="nav-item"><a class="nav-link" href="#registro">Registrate</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">faq</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Scrollarmy</a></li>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                            START SECTION 2 - THE INTRO SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<section id="home" class="intro-section">
-  <div class="container">
-    <div class="row align-items-center text-white">
-      <!-- START THE CONTENT FOR THE INTRO  -->
-      <div class="col-md-6 intros text-start">
-        <h1 class="display-2">
-          <span class="display-2--intro">FLISOL 2023</span>
-          <span class="display-2--description lh-base">
-            Flisol es un evento anual que promueve el uso y acceso al software libre. En la ciudad de Pergamino, la comunidad Scrollarmy lo organiza este sábado 22 de abril 13 hs. ¡Ven y aprende sobre tecnología libre!
-          </span>
-        </h1>
-        <a href="#registro" type="button" class="btn btn-rounded rounded-pill pt-3 pb-3">
-          Registro
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-      <!-- START THE CONTENT FOR THE VIDEO -->
-      <div class="col-md-6 intros text-end">
-        <div class="video-box">
-          <img src="event/images/flisolxscrollarmy-logo.png" alt="video illutration" class="img-fluid">
-        </div>
-      </div>
+      <nav class="navbar px-0 navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
     </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#090706" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-</section>
 
-<!-- //////////////////////////////////////////////////////////////////////////////////////////////
-                         START SECTION 4 - THE SERVICES  
-///////////////////////////////////////////////////////////////////////////////////////////////////-->
-<section id="acerca-de-flisol" class="services">
-  <div class="container">
-    <div class="row text-center">
-      <h1 class="display-3 mt-5 fw-bold">Acerca de Flisol</h1>
-      <div class="heading-line mb-1"></div>
-    </div>
-
-  <!-- START THE CONTENT FOR THE SERVICES  -->
-  <div class="container">
-    <!-- START que es flisol  -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-magic"></div>
-          <h3 class="display-3--title mt-1">Que es Flisol?</h3>
-          <p class="lh-lg">
-            FLISOL es un festival que promueve el uso y conocimiento del software libre en América Latina. Incluye charlas, talleres y demostraciones de herramientas de código abierto, así como la instalación gratuita de sistemas operativos y programas en las computadoras de los participantes con la ayuda de voluntarios y expertos.
-          </p>
+  <div class="jumbotron bg-transparent mb-0 radius-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-8">
+          <br>
+          <h1 class="display-2 "><span class="text-warning">#</span>Metadata202<span class="vim-caret">3</span></h1>
+          <div class="lead mb-3 text-mono text-warning">- Jueves 14 de septiembre desde las 18hs </div>
+          <!-- <div class="lead mb-3 text-mono text-warning">- Nos encontramos en el patio de Bulliban! Av de mayo 320 </div> -->
+          <div class="lead mb-3 text-mono text-warning">- 5 Charlas tech </div>
+          <div class="lead mb-3 text-mono text-warning">- Completamente gratuito </div>
+          <div class="text-mono">
+            <a href="https://forms.gle/e5e9tz3LN1sqrRrg8" target="_blank" title="call_to_action_register"tf-state-ventasonline-payway-us-east-1 
+            e class="btn btn-primary btn-shadow px-3 my-2 ml-5 text-left">
+              Quiero registrarme
+            </a>
           </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-        <div class="services__pic">
-          <img src="event/images/undraw_electricity_k2ft.png" alt="marketing illustration" class="img-fluid">
         </div>
-      </div>
+        <div class="col-xl-4">
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/ScrArmy-small.png" alt="Avatar" style="width:300px;height:300px;">
     </div>
-    <!-- START importancia en el area de sistemas  -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-        <div class="services__pic">
-          <img src="event/images/undraw_Fingerprint_login_re_t71l.png" alt="web development illustration" class="img-fluid">
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-code"></div>
-          <h3 class="display-3--title mt-1">Su importancia en el área de sistemas</h3>
-          <p class="lh-lg">
-            FLISOL es importante para el área de sistemas porque promueve el uso y conocimiento del software libre, lo que puede mejorar la eficiencia y calidad de los sistemas informáticos, así como fomentar la colaboración y la innovación en el ámbito del software libre.          </p>
-        </div>
-      </div>
+    <div class="flip-card-back">
+      <br>
+      <br>
+      <br>
+      <h1>Somos Scrollarmy</h1> 
+      <p>Lo hacemos con amor<br>
+      sin mucho presupuesto 🐧❣️</p>
     </div>
   </div>
-</section>
-
-<section id="instalaciones" class="services">
-  <div class="container">
-      <div class="row text-center">
-        <h1 class="display-3 fw-bold">Instalaciones de software libre.</h1>
-        <div class="heading-line mb-1"></div>
-      </div>
-    <div class="container">
-          <!-- START promoci[on del uso de software libre  -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-cloud-upload-alt"></div>
-          <h3 class="display-3--title mt-1">Promoción del uso de software libre</h3>
-          <p class="lh-lg">
-            El uso de software libre es importante porque permite el acceso a tecnologías y herramientas de forma gratuita y sin restricciones, fomenta la colaboración y la innovación en el desarrollo de soluciones informáticas, y evita la dependencia de proveedores y tecnologías cerradas.
-          </p>
+</div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-        <div class="services__pic">
-          <img src="event/images/undraw_Appreciate_it_re_yc8h.png" alt="cloud hosting illustration" class="img-fluid">
-        </div>
-      </div>
-    </div>
-    <!-- START que se v[a a instalar y como?]  -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-        <div class="services__pic">
-          <img src="event/images/undraw_Engineering_team_a7n2.png" alt="web development illustration" class="img-fluid">
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-hat-wizard"></div>
-          <h3 class="display-3--title mt-1">Que instalamos y como</h3>
-          <p class="lh-lg">
-            Se instalan sistemas operativos y aplicaciones de software libre en las computadoras de los participantes, de forma gratuita y con la ayuda de voluntarios y expertos en la materia.
-          </p>
-        </div>
-      </div>
+      <p class="lead my-5">
+        Metadata es una conferencia, completamente gratuita, con contenido de ciencia y tecnologia, una experiencia
+        social con charlas en vivo. Donde se ofrece la posibilidad de aprender de los lideres de la industria en la zona
+      </p>
     </div>
   </div>
-</section>
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////
-                               START SECTION 5 - THE TESTIMONIALS  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<section id="registro" class="registro">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F1F1F1" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-  <div class="container">
-    <div class="row text-center text-white">
-      <h1 class="display-3 fw-bold">Regístrate</h1>
-      <hr style="width: 100px; height: 3px; " class="mx-auto">
-    </div>
-    <div class="container text-center">
-      <ul>
-        <!-- icon d-block fas fa-magic -->
-        <li class="display-2--description" style="color:aliceblue">
-            <span class="icon fa fa-map-marker m-3"></span>
-            Escuela de bellas artes
-        </li>
-        <li class="display-2--description" style="color:aliceblue">
-            <span class="icon fa fa-clock m-3"></span>
-            Sabado 22 de abril - 13hs 
-        </li>
-      </ul>
-    </div>
-    <div class="text-center d-grid mt-1">
-      <a href="https://forms.gle/mYJj7zTKb2sJyFoA8" Target="_blank" type="button" class="btn btn-registro btn-secondary rounded-pill pt-3 pb-3">
-        Completá este formulario
-        <i class="fas fa-paper-plane"></i>
-      </a>
-    </div>
-  </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#F1F1F1" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-    </path>
-  </svg>
-</section>
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                       START SECTION 6 - THE FAQ 
-//////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<section id="faq" class="faq">
-  <div class="container">
-    <div class="row text-center">
-      <h1 class="display-3 fw-bold text-uppercase">faq</h1>
-      <div class="heading-line"></div>
-      <p class="lead">Preguntas frecuentes sobre el evento o instalaciones de software</p>
-    </div>
-    <!-- ACCORDION CONTENT  -->
+  <!-- <div class="container">
     <div class="row mt-5">
-      <div class="col-md-12">
-        <div class="accordion" id="accordionExample">
-          <!-- ACCORDION ITEM 1 -->
-          <div class="accordion-item shadow mb-3">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                ¿Qué es el software libre?
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                El software libre es aquel que permite a los usuarios utilizar, copiar, distribuir y modificar el programa, sin restricciones. Esto se logra mediante la distribución del código fuente del programa y la concesión de ciertos derechos de uso.
-              </div>
-            </div>
-          </div>
-             <!-- ACCORDION ITEM 2 -->
-          <div class="accordion-item shadow mb-3">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                ¿Cuáles son algunos ejemplos de software libre?
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Algunos ejemplos de software libre son: Linux, Mozilla Firefox, LibreOffice, Apache, MySQL, PostgreSQL, VLC, entre otros.
-              </div>
-            </div>
-          </div>
-             <!-- ACCORDION ITEM 3 -->
-          <div class="accordion-item shadow mb-3">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                ¿El evento es completamente gratuito?
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>Sip.</strong>
-              </div>
-            </div>
-          </div>
-             <!-- ACCORDION ITEM 4 -->
-          <div class="accordion-item shadow mb-3">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                ¿Es necesario tener conocimientos previos para asistir al FLISoL?
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                No es necesario tener conocimientos previos sobre software libre para asistir al FLISoL. El evento está diseñado para que cualquier persona pueda acercarse al mundo del software libre y conocer sus beneficios y aplicaciones.              </div>
-            </div>
-          </div>
-
-          <!-- ACCORDION ITEM 5 -->
-          <div class="accordion-item shadow mb-3">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                ¿Qué tipo de computadora puede instalar Linux? ¿Qué necesito hacer antes de llevarla al evento?
-              </button>
-            </h2>
-          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              La mayoría de las computadoras modernas pueden instalar y ejecutar Linux sin problemas. Sin embargo, es posible que algunas computadoras más antiguas o específicas no sean compatibles con ciertas distribuciones de Linux.
-
-              Antes de llevar tu computadora al evento de FLISoL, es recomendable hacer una copia de seguridad de todos tus archivos importantes y documentos, así como verificar que tengas suficiente espacio libre en el disco duro. También es recomendable desfragmentar el disco y realizar una limpieza del sistema para asegurarse de que la computadora esté en óptimas condiciones para la instalación de Linux.
-              
-              Además, es importante asegurarse de tener una copia del sistema operativo Linux que deseas instalar, ya sea en un DVD o una unidad USB. Si no tienes una copia, es posible que puedas obtenerla en el evento de FLISoL. También puedes descargar la distribución de Linux que deseas instalar antes del evento y llevarla contigo en una unidad USB.
-              
-              En resumen, cualquier computadora moderna puede instalar Linux, pero es importante prepararla adecuadamente antes de llevarla al evento de FLISoL para asegurarse de que la instalación se realice sin problemas.              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item shadow mb-3">
-            <h2 class="accordion-header" id="headingSix">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              ¿Pueden ayudarme a instalar cualquier sistema operativo que elija?
-              </button>
-            </h2>
-            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Aunque el objetivo principal del FLISoL es promover y difundir el software libre y de código abierto, en general, los voluntarios que participan en el evento estarán dispuestos a ayudarte a instalar cualquier sistema operativo que elijas, siempre y cuando la instalación se realice de manera legal y respetando los derechos de autor.
-
-                Es importante tener en cuenta que, en algunos casos, la instalación de ciertos sistemas operativos puede requerir más tiempo y recursos que otros, y es posible que los voluntarios no puedan ayudarte con todas las etapas del proceso de instalación.
-                
-                Además, si decides instalar un sistema operativo que no es de código abierto, es posible que los voluntarios no puedan proporcionarte soporte técnico adicional después del evento, ya que su enfoque principal es el software libre.
-                
-                En resumen, aunque el FLISoL se enfoca en la promoción del software libre, los voluntarios pueden estar dispuestos a ayudarte con la instalación de cualquier sistema operativo que elijas, siempre y cuando la instalación sea legal y se respeten los derechos de autor.            </div>
-          </div>
-          
-      </div>
+      <div class="display-2 lead mb-3 text-mono text-success"><span class="text-warning">~$</span>Agenda.ics</div>
     </div>
-  </div>
-</section>
-
-<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
-                              START SECTION 7 - THE PORTFOLIO  
-//////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<section id="portfolio" class="portfolio">
+    <br>
+  </div> -->
+  
   <div class="container">
-    <div class="row text-center mt-5">
-      <h1 class="display-3 fw-bold text-capitalize">¿Qué hacemos en Scrollarmy?</h1>
-      <div class="heading-line"></div>
+    <div class="row">
+      <div class="display-2 lead mb-3 text-mono text-success"><span class="text-warning">~$</span>Agenda y Speakers</div>
+    </div>
       <p class="lead">
-        Somos una comunidad ubicada en Pergamino, donde buscamos reunir a todas las personas que trabajen y/o estén relacionadas al área de sistemas, sin importar si están empezando o llevan años en esto.      </p>
-    </div>
-
-    <div class="container">
-      <!-- heading text -->
-      <div class="image-gallery">
-        <div class="column">
-          <div class="image-item">
-            <img src="event/images/gallery/momentos1.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos2.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos3.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos4.jpg" loading="lazy" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos5.jpg" loading="lazy" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos6.jpg" loading="lazy" alt="" />
-          </div>
-          <!-- other items here -->
-        </div>
-        <div class="column">
-          <div class="image-item">
-            <img src="event/images/gallery/momentos7.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos8.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos9.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos10.jpg" loading="lazy" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos11.jpeg" loading="lazy" alt="" />
-          </div>
-          <!-- other items here -->
-        </div>
-        <div class="column">
-          <div class="image-item">
-            <img src="event/images/gallery/momentos12.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos13.jpg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos14.jpeg" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos15.jpeg" loading="lazy" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos16.jpeg" loading="lazy" alt="" />
-          </div>
-          <div class="image-item">
-            <img src="event/images/gallery/momentos17.jpeg" loading="lazy" alt="" />
-          </div>
-          <!-- other items here -->
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-
-<!-- ///////////////////////////////////////////////////////////////////////////////////////////
-                           START SECTION 9 - THE FOOTER  
-///////////////////////////////////////////////////////////////////////////////////////////////-->
-<footer class="footer">
-
-  <!-- START THE SOCIAL MEDIA CONTENT  -->
-  <div class="footer-sm" style="background-color: #212121;">
-    <div class="container">
-      <div class="row py-4 text-center text-white">
-        <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-          Seguinos en redes sociales :)
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <a href="https://twitter.com/scrollarmy"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/scrollarmy/"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/scrollarmy"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-    </div>
+        <em>
+          Muy pronto liberaremos la agenda y la lista de speakers del evento
+        </em>
+      </p>
+    <br>
   </div>
 
-  <!-- START THE COPYRIGHT INFO  -->
-  <div class="footer-bottom pt-5 pb-5">
-    <div class="container">
-      <div class="row text-center text-white">
-        <div class="col-12">
-          <div class="footer-bottom__copyright">
-            &COPY; Copyright 2023 | Creado por <strong>Scrollarmy</strong> con ❣️ en base a un template de <a href="http://codewithpatrick.com" target="_blank">Muriungi</a><br><br>
+  <div class="container">
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="display-2 lead mb-3 text-mono text-success"><span class="text-warning">~$</span>Whoami</div>
+          <!-- <h1 class="display-3 fw-bold text-capitalize">¿Qué hacemos en Scrollarmy?</h1> -->
+          <div class="heading-line"></div>
+          <p class="lead">
+            Somos una comunidad ubicada en Pergamino, donde buscamos reunir a todas las personas que trabajen y/o estén
+            relacionadas al área de sistemas, sin importar si están empezando o llevan años en esto. </p>
+        </div>
+        <br>
+        <div class="container">
+          <!-- heading text -->
+          <div class="image-gallery">
+            <div class="column">
+              <div class="image-item">
+                <img src="event/images/gallery/momentos1.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos2.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos3.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos4.jpg" loading="lazy" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos5.jpg" loading="lazy" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos6.jpg" loading="lazy" alt="" />
+              </div>
+              <!-- other items here -->
+            </div>
+            <div class="column">
+              <div class="image-item">
+                <img src="event/images/gallery/momentos7.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos8.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos9.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos10.jpg" loading="lazy" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos11.jpeg" loading="lazy" alt="" />
+              </div>
+              <!-- other items here -->
+            </div>
+            <div class="column">
+              <div class="image-item">
+                <img src="event/images/gallery/momentos12.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos13.jpg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos14.jpeg" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos15.jpeg" loading="lazy" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos16.jpeg" loading="lazy" alt="" />
+              </div>
+              <div class="image-item">
+                <img src="event/images/gallery/momentos17.jpeg" loading="lazy" alt="" />
+              </div>
+              <!-- other items here -->
+            </div>
           </div>
         </div>
+
       </div>
+    </section>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <span class="hal-9000 d-block mx-auto mb-4 mt-5"></span>
     </div>
   </div>
-</footer>
 
-<!-- BACK TO TOP BUTTON  -->
-<a href="#" class="shadow btn-primary rounded-circle back-to-top">
-  <i class="fas fa-chevron-up"></i>
-</a>
+   <!-- Copyright -->
+   <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p class="p-small">Ideado con ❣️ por Scrollarmy 🐧 en base al template <a href="https://hackerthemes.com/bootstrap-themes/neon-glow/">Neon Glow</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of copyright --> 
+<!-- end of copyright -->
 
-  <script src="event/assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
 </body>
+
 </html>
