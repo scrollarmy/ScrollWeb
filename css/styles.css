@@ -2281,3 +2281,6 @@ a:hover.back-to-top {
     bottom: -294px;
     animation-delay: 75s;
 }
+.img-rounded{
+	border-radius: 15px;
+}
