@@ -1349,21 +1349,7 @@ login de lapos web
 	vertical-align: 3%;
 }
 
-
-/**********************/
-/*     Evento         */
-/**********************/
-
-#evento{
-	padding: 4rem 0;
-	background-color: #221f2b;
-}
-
-/**********************/
-/*     Blog           */
-/**********************/
-
-#blog{
+#cowork, #evento, #blog{
 	padding: 4rem 0;
 	background-color: #221f2b;
 }
@@ -1774,11 +1760,14 @@ a:hover.back-to-top {
 		font-size: 0.75rem;
 	}
 	
-	.navbar-custom .fa-stack-2x {
+	.navbar-custom .css-twitter {
 		color: #00c9db;
 		transition: all 0.2s ease;
 	}
-	
+	.navbar-custom .css-instagram {
+		color: rgb(255, 45, 167);
+		transition: all 0.2s ease;
+	}
 	.navbar-custom .fa-stack-1x {
 		color: #fff;
 		transition: all 0.2s ease;
@@ -1788,8 +1777,11 @@ a:hover.back-to-top {
 		color: #fff;
 	}
 
-	.navbar-custom .fa-stack:hover .fa-stack-1x {
+	.navbar-custom .fa-stack:hover .fa-twitter {
 		color: #00c9db;
+	}
+	.navbar-custom .fa-stack:hover .fa-instagram {
+		color: rgb(255, 45, 167);
 	}
 	/* end of navigation */
 
