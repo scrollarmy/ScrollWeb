@@ -749,7 +749,6 @@ input[type='checkbox'] {
 /*********************/
 .header {
 	background-color: #2f2c3d;
-	background-color: #2f2c3d;
 }
 
 .header .header-content {
@@ -1349,11 +1348,8 @@ login de lapos web
 .form .list-unstyled .fa-phone {
 	vertical-align: 3%;
 }
-/**********************/
-/*     Blog           */
-/**********************/
 
-#blog{
+#cowork, #evento, #blog{
 	padding: 4rem 0;
 	background-color: #221f2b;
 }
@@ -1928,7 +1924,6 @@ a:hover.back-to-top {
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
 
-
 	/* Navigation */
 	.navbar-custom {
 		padding: 2.125rem 5rem 2.125rem 5rem;
@@ -2277,4 +2272,7 @@ a:hover.back-to-top {
     height: 294px;
     bottom: -294px;
     animation-delay: 75s;
+}
+.img-rounded{
+	border-radius: 15px;
 }
